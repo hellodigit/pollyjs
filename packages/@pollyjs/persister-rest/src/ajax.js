@@ -37,7 +37,7 @@ function handleResponse(xhr, resolve, reject) {
       body = JSON.parse(body);
     } catch (e) {
       if (!(e instanceof SyntaxError)) {
-        console.error(e);
+        console.error("[@pollyjs/persister-rest] An error occurred while handling response", e);
       }
     }
   }

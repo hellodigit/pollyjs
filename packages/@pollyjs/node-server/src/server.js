@@ -48,7 +48,7 @@ export default class Server {
           console.error(`Port ${port} already in use.`);
           process.exit(1);
         } else {
-          console.error(e);
+          console.error("[@pollyjs/node-server] An error occurred", e);
         }
       });
 

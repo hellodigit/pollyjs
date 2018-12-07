@@ -233,7 +233,7 @@ export default class PuppeteerAdapter extends Adapter {
         await response.text()
       );
     } catch (error) {
-      console.error(error);
+      console.error("[@pollyjs/adapter-puppeteer] An error occurred while processing request", error);
       throw error;
     } finally {
       this[PASSTHROUGH_PROMISES].delete(requestId);
